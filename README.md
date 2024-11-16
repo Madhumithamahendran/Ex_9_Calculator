@@ -1,3 +1,4 @@
+## DATE : 7.10.2024
 ## Ex.No:9 Develop a simple calculator using android studio.
 ## AIM:
 To develop a program to develop a simple calculator in Android Studio.
@@ -210,23 +211,16 @@ public class MainActivity extends AppCompatActivity {
 
     public boolean getNumbers() {
 
-        e1 = (EditText) findViewById(R.id.num1);
-
-        e2 = (EditText) findViewById(R.id.num2);
-
-        t1 = (TextView) findViewById(R.id.result);
-
-        String s1 = e1.getText().toString();
-
-        String s2 = e2.getText().toString();
-
-        if ((s1.equals(null) && s2.equals(null))
-                || (s1.equals("") && s2.equals(""))) {
-
-            String result = "Please enter a value";
-            t1.setText(result);
-
-            return false;
+e1 = (EditText) findViewById(R.id.num1);
+e2 = (EditText) findViewById(R.id.num2);
+t1 = (TextView) findViewById(R.id.result);
+String s1 = e1.getText().toString();
+String s2 = e2.getText().toString();
+if ((s1.equals(null) && s2.equals(null))
+|| (s1.equals("") && s2.equals(""))) {
+String result = "Please enter a value";
+t1.setText(result);
+return false;
         } else {
             num1 = Integer.parseInt(s1);
 
@@ -235,15 +229,13 @@ public class MainActivity extends AppCompatActivity {
 
         return true;
     }
-
-    public void doSum(View v) {
+public void doSum(View v) {
 
         if (getNumbers()) {
             int sum = num1 + num2;
             t1.setText(num1+"+"+num2+"="+Integer.toString(sum));
         }
     }
-
     public void doSub(View v) {
 
         if (getNumbers()) {
@@ -253,8 +245,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void doMul(View v) {
-
-        if (getNumbers()) {
+if (getNumbers()) {
             int mul = num1 * num2;
             t1.setText(num1+"*"+num2+"="+Integer.toString(mul));
         }
